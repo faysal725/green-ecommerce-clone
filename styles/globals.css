@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fallenShadow{
+    animation-name: fluctuator;
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fluctuator{
+    0%  {transform: scaleX(1);}
+    10%  {transform: scaleX(1.3);}
+    20%  {transform: scaleX(1.5);}
+    30%  {transform: scaleX(2);}
+    40% {transform: scaleX(2.5)}
+    50%  {transform: scaleX(1.5);}
+    60%  {transform: scaleX(1);}
+    70%  {transform: scaleX(1.5);}
+    80% {transform: scaleX(2)}
+    90%  {transform: scaleX(2.5);}
+    100% {transform: scaleX(1.5)}
+}
+
+.carousel-element{
+    animation-name: carousel;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.carousel-element:hover {
+    animation-play-state: paused;
+}
+
+.card-item:hover .carousel-element{
+    animation-play-state: paused;
+}
+
+@keyframes carousel{
+    0%  {transform: translateX(13em);}
+    100% {transform: translateX(-17em)}
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
